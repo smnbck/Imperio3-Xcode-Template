@@ -3,14 +3,12 @@
 import Imperio
 import UIKit
 
-protocol ___VARIABLE_productName:identifier___FlowDelegate: AnyObject {
-}
-
 class ___FILEBASENAMEASIDENTIFIER___: FlowController {
     // MARK: - Properties
     private lazy var viewCtrl: ___VARIABLE_productName:identifier___ViewController = {
         let viewCtrl = ___VARIABLE_productName:identifier___ViewController()
-        viewCtrl.flowDelegate = self
+        viewCtrl.delegate = self
+        viewCtrl.viewModel = ___VARIABLE_productName:identifier___ViewController.ViewModel()
         return viewCtrl
     }()
 
@@ -20,5 +18,5 @@ class ___FILEBASENAMEASIDENTIFIER___: FlowController {
     }
 }
 
-extension ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_productName:identifier___FlowDelegate {
+extension ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_productName:identifier___ViewControllerDelegate {
 }
